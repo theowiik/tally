@@ -1,62 +1,41 @@
-# Created by https://www.toptal.com/developers/gitignore/api/erlang,elixir,phoenix
-# Edit at https://www.toptal.com/developers/gitignore?templates=erlang,elixir,phoenix
+# The directory Mix will write compiled artifacts to.
+/_build/
 
-### Elixir ###
-/_build
-/cover
-/deps
-/doc
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+/doc/
+
+# Ignore .fetch files in case you like to edit your project deps locally.
 /.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
 erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
 *.ez
-*.beam
-/config/*.secret.exs
-.elixir_ls/
 
-### Elixir Patch ###
+# Temporary files, for example, from tests.
+/tmp/
 
-### Erlang ###
-.eunit
-*.o
-*.plt
-.concrete/DEV_MODE
+# Ignore package tarball (built via "mix hex.build").
+tally-*.tar
 
-# rebar 2.x
-.rebar
-rel/example_project
-ebin/*.beam
-deps
+# Ignore assets that are produced by build tools.
+/priv/static/assets/
 
-# rebar 3
-.rebar3
-_build/
-_checkouts/
+# Ignore digested assets cache.
+/priv/static/cache_manifest.json
 
-### Erlang Patch ###
-rebar3.crashdump
+# In case you use Node.js/npm, you want to ignore these.
+npm-debug.log
+/assets/node_modules/
 
-### Phoenix ###
-# gitignore template for Phoenix projects
-# website: http://www.phoenixframework.org/
-#
-# Recommended template: Elixir.gitignore
+# Database files
+*.db
+*.db-*
 
-# Temporary files
-/tmp
-
-# Static artifacts
-/node_modules
-/assets/node_modules
-
-# Since we are building assets from web/static,
-# we ignore priv/static. You may want to comment
-# this depending on your deployment strategy.
-/priv/static/
-
-# Installer-related files
-/installer/_build
-/installer/tmp
-/installer/doc
-/installer/deps
-
-# End of https://www.toptal.com/developers/gitignore/api/erlang,elixir,phoenix
